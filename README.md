@@ -1,5 +1,9 @@
 # Budgie-ShowData
-*NOTE as a personal project, this is still unfinished, datacap is hardcoded, vnstat config isn't editable through in settings, yet!*  
+*NOTE as a personal project, this is still unfinished, vnstat config isn't editable through in settings, yet!*  
+[Update]  
+Changes to some math problems with converting data types.  
+Datacap is no longer hardcoded, settings ui updated to reflect changes.  
+[END OF UPDATES]
 A data usage display based on vnstats and Budgie-ShowTime.  
 In order to use the applet, first install vnstat:  
 `sudo apt-get update`  
@@ -14,7 +18,7 @@ After everything is setup, download ShowData, and copy to:
 `/usr/lib/budgie-desktop/plugins`  
 And run:
 `budgie-panel --replace &` for any debugging purposes.  
-* (Cannot close terminal without killing the panel)
+* (Cannot close terminal without killing the panel)  
 Or run:
 `nohup budgie-panel --replace&`
 Which will allow you to close the terminal and keep the panel.
