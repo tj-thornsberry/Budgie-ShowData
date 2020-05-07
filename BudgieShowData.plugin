@@ -3,5 +3,5 @@ Loader=python3
 Module=budgie_dataUsage
 Name=ShowData
 Description=Desktop Data Usage
-Authors=TJ Thornsberry
+Authors=Jacob Vlijm, TJ Thornsberry
 Icon=budgie-showtime-symbolic
