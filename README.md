@@ -32,19 +32,19 @@ And a config file for vnstats: `/home/USER/.vnstatrc`
 
 Examples:  
 Option: Minimal With Shadow Effects  
-![Minimal (Shadow Effects)](Example_minimal_shadow.png)  
+![Minimal (Shadow Effects)](Examples/Example_minimal_shadow.png)  
   
 Option: Short With Everything Displayed  
-![Short (Shadow Effects)](Example_short_all.png)  
+![Short (Shadow Effects)](Examples/Example_short_all.png)  
   
 Option: Long With Everything Displayed  
-![Long (White on Black)](Example_long_all.png)  
+![Long (White on Black)](Examples/Example_long_all.png)  
   
 Option: Detailed With Everything Displayed  
-![Detailed (White on Black)](Example_detailed.png) 
+![Detailed (White on Black)](Examples/Example_detailed.png) 
   
 Option: Detailed With Shadow Effects 
-![Detailed (Shadow Effects)](Example_detailed_shadow.png) 
+![Detailed (Shadow Effects)](Examples/Example_detailed_shadow.png) 
   
 Options Menu  
-![Detailed (With Options)](Example_options.png)
+![Detailed (With Options)](Examples/Example_options.png)
