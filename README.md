@@ -11,6 +11,12 @@ Do not add the "(10 MBit)" part into the next command.
 `sudo systemctl start vnstat.service`  
 After everything is setup, download ShowData, and copy to:  
 `/usr/lib/budgie-desktop/plugins`  
+And run:
+`budgie-panel --replace &` for any debugging purposes.  
+* (Cannot close terminal without killing the panel)
+Or run:
+`nohup budgie-panel --replace&`
+Which will allow you to close the terminal and keep the panel.
   
 This applet will create an ini: `/home/USER/.config/budgie-extras/showdata`  
 And a config file for vnstats: `/home/USER/.vnstatrc`  
