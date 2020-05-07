@@ -3,7 +3,7 @@
 [Update]  
 Changes to some math problems with converting data types.  
 Datacap is no longer hardcoded, settings ui updated to reflect changes.  
-[END OF UPDATES]
+[/Updates]  
 A data usage display based on vnstats and Budgie-ShowTime.  
 In order to use the applet, first install vnstat:  
 `sudo apt-get update`  
