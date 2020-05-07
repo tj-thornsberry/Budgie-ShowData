@@ -1,9 +1,4 @@
 # Budgie-ShowData
-*NOTE as a personal project, this is still unfinished, vnstat config isn't editable through in settings, yet!*  
-[Update]  
-Changes to some math problems with converting data types.  
-Datacap is no longer hardcoded, settings ui updated to reflect changes.  
-[/Updates]  
 A data usage display based on vnstats and Budgie-ShowTime.  
 In order to use the applet, first install vnstat:  
 `sudo apt-get update`  
@@ -32,7 +27,12 @@ And a config file for vnstats: `/home/USER/.vnstatrc`
 `vnstat --delete -i eth0`  
 * You will also need to install https://github.com/tbielawa/bitmath  
 `sudo -H pip3 install bitmath`
+* NOTE as a personal project, this is still unfinished, vnstat config isn't editable through in settings, yet!*    
 
+[Update]  
+Changes to some math problems with converting data types.  
+Datacap is no longer hardcoded, settings ui updated to reflect changes.  
+[/Update]  
 
 Examples:  
 Option: Minimal With Shadow Effects  
