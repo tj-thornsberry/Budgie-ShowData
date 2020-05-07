@@ -1,5 +1,5 @@
 # Budgie-ShowData
-Budgie data usage display based on vnstats and Budgie-ShowTime.  
+A data usage display based on vnstats and Budgie-ShowTime.  
 In order to use the applet, first install vnstat:  
 `sudo apt-get update`  
 `sudo apt-get install vnstat`  
