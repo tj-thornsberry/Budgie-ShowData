@@ -19,8 +19,9 @@ After everything is setup, download ShowData, and copy to:
 And run:
 `budgie-panel --replace &` for any debugging purposes.  
 * (Cannot close terminal without killing the panel)  
+
 Or run:
-`nohup budgie-panel --replace&`
+`nohup budgie-panel --replace&`  
 Which will allow you to close the terminal and keep the panel.
   
 This applet will create an ini: `/home/USER/.config/budgie-extras/showdata`  
@@ -29,6 +30,9 @@ And a config file for vnstats: `/home/USER/.vnstatrc`
   
 * Note - To delete DB file for interface, use:  
 `vnstat --delete -i eth0`  
+* You will also need to install https://github.com/tbielawa/bitmath  
+`sudo -H pip3 install bitmath`
+
 
 Examples:  
 Option: Minimal With Shadow Effects  
