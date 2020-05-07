@@ -1,0 +1,55 @@
+#! /usr/bin/python3
+import os
+import subprocess
+import time
+import psutil
+from datatools import app_path, user
+
+"""
+Budgie ShowData
+Author: TJ Thornsberry
+"""
+
+dcpath = "/com/solus-project/budgie-panel/applets/"
+app = os.path.join(app_path, "ShowData")
+
+
+def getkey():
+    data = subprocess.check_output([
+        "dconf", "dump", dcpath,
+    ]).decode("utf-8").splitlines()
+    try:
+        match = [l for l in data if "ShowData" in l][0]
+        watch = data.index(match) - 3
+        return data[watch][1:-1]
+    except IndexError:
+        pass
+
+
+def get_pid():
+    try:
+        return int(subprocess.check_output([
+            "pgrep", "-f", "-u", user, app,
+        ]).decode("utf-8").strip())
+    except subprocess.CalledProcessError:
+        return subprocess.Popen(app).pid
+
+
+def run_showdata():
+    time.sleep(3)
+    key = getkey()
+    while True:
+        time.sleep(3)
+        try:
+            check = subprocess.check_output([
+                "dconf", "dump", dcpath + key + "/",
+            ]).decode("utf-8")
+            if not check:
+                break
+        except TypeError:
+            break
+
+
+pid = get_pid()
+run_showdata()
+psutil.Process(pid).terminate()

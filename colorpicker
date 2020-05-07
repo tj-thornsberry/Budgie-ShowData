@@ -1,0 +1,68 @@
+#! /usr/bin/python3
+import gi
+
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk, Gdk
+import datatools as clt
+import sys
+
+f = sys.argv[1]
+
+"""
+Budgie ShowData
+Author: TJ Thornsberry
+"""
+
+
+class ColorChooser(Gtk.Window):
+    def __init__(self):
+        Gtk.Window.__init__(self, title="ShowData - set color")
+        maingrid = Gtk.Grid()
+        maingrid.set_border_width(10)
+        self.set_focus()
+        self.set_skip_taskbar_hint(True)
+        self.add(maingrid)
+        self.color = Gtk.ColorSelection()
+        self.color.set_has_palette(False)
+        currc = [int(x) for x in clt.config["COLORS"][f].split(",")]
+        suggested = Gdk.Color(red=currc[0], green=currc[1], blue=currc[2])
+        self.color.set_current_color(suggested)
+        maingrid.attach(self.color, 0, 0, 1, 1)
+
+        buttonbox = Gtk.Box()
+        maingrid.attach(buttonbox, 0, 1, 1, 1)
+
+        choose = Gtk.Button("Choose")
+        choose.connect("clicked", self.set_newcolor)
+        choose.set_size_request(90, 20)
+        buttonbox.pack_end(choose, False, False, 0)
+
+        cancel = Gtk.Button("Cancel")
+        cancel.connect("clicked", self.close_window)
+        cancel.set_size_request(90, 20)
+        buttonbox.pack_end(cancel, False, False, 0)
+
+    def set_newcolor(self, *args):
+        newcolor = str(self.color.get_current_color()).split()
+        rgb = [
+            s.split("=")[1].replace(",", "").replace(")", "")
+            for s in newcolor
+        ]
+        clt.config["COLORS"][f] = ",".join(rgb)
+        with open(clt.config_file, 'w') as cf:
+            clt.config.write(cf)
+        clt.restart_data()
+        self.close_window()
+
+    def close_window(self, *args):
+        Gtk.main_quit()
+
+
+def chooser():
+    window = ColorChooser()
+    window.connect("destroy", Gtk.main_quit)
+    window.show_all()
+    Gtk.main()
+
+
+chooser()

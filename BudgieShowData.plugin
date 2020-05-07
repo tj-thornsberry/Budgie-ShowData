@@ -1,0 +1,7 @@
+[Plugin]
+Loader=python3
+Module=budgie_dataUsage
+Name=ShowData
+Description=Desktop Data Usage
+Authors=TJ Thornsberry
+Icon=budgie-showtime-symbolic
