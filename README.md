@@ -1,20 +1,20 @@
 # Budgie-ShowData
-Budgie data usage display based on vnstats and Budgie-ShowTime
-In order to use the applet, first install vnstat:
-`sudo apt-get update`
-`sudo apt-get install vnstat`
-`vnstat --iflist`
-Example output: `Available interfaces: tun0 (10 Mbit) lo wlxe8de27a1f498 enp4s0`
-Do not add the "(10 MBit)" part into the next command.
-`vnstat --create -i tun0` or `vnstat --create -i wlxe8de27a1f498`
-`sudo systemctl enable vnstat.service`
-`sudo systemctl start vnstat.service`
-After everything is setup, download ShowData, and copy to:
-`/usr/lib/budgie-desktop/plugins`
-
-This applet will create an ini: `/home/USER/.config/budgie-extras/showdata`
-And a config file for vnstats: `/home/USER/.vnstatrc`
-
-
-* Note - To delete DB file for interface, use:
-`vnstat --delete -i eth0`
+Budgie data usage display based on vnstats and Budgie-ShowTime.  
+In order to use the applet, first install vnstat:  
+`sudo apt-get update`  
+`sudo apt-get install vnstat`  
+`vnstat --iflist`  
+Example output: `Available interfaces: tun0 (10 Mbit) lo wlxe8de27a1f498 enp4s0`  
+Do not add the "(10 MBit)" part into the next command.  
+`vnstat --create -i tun0` or `vnstat --create -i wlxe8de27a1f498`  
+`sudo systemctl enable vnstat.service`  
+`sudo systemctl start vnstat.service`  
+After everything is setup, download ShowData, and copy to:  
+`/usr/lib/budgie-desktop/plugins`  
+  
+This applet will create an ini: `/home/USER/.config/budgie-extras/showdata`  
+And a config file for vnstats: `/home/USER/.vnstatrc`  
+  
+  
+* Note - To delete DB file for interface, use:  
+`vnstat --delete -i eth0`  
