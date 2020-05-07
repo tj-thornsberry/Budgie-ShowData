@@ -24,3 +24,22 @@ And a config file for vnstats: `/home/USER/.vnstatrc`
   
 * Note - To delete DB file for interface, use:  
 `vnstat --delete -i eth0`  
+
+Examples:  
+Option: Minimal With Shadow Effects  
+![Minimal (Shadow Effects)](Example_minimal_shadow.png)  
+  
+Option: Short With Everything Displayed  
+![Short (Shadow Effects)](Example_short_all.png)  
+  
+Option: Long With Everything Displayed  
+![Long (White on Black)](Example_long_all.png)  
+  
+Option: Detailed With Everything Displayed  
+![Detailed (White on Black)](Example_detailed.png) 
+  
+Option: Detailed With Shadow Effects 
+![Detailed (Shadow Effects)](Example_detailed_shadow.png) 
+  
+Options Menu  
+![Detailed (With Options)](Example_options.png)
